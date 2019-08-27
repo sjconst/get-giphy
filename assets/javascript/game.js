@@ -1,24 +1,30 @@
 $(document).ready(function() {
-    // ### Instructions
-    
-    // 6. Add a form to your page that takes a value from a user input box and adds it to your `topics` array. Then make a function call that takes each topic in the array and remakes the buttons on the page.
-    
-    // 7. Deploy your assignment to Github Pages.
-    
+   
 //Global variables, setup objects
 
-var badassWomen = ["Cleopatra", "Serena Williams", "Beyonce", "Miss Piggy", "Princess Lea"];
+var badassWomen = ["Cleopatra", "Serena Williams", "Beyonce", "Miss Piggy", "Princess Lea", "Cher", "Abby Wambach", "Ruth Bader Ginsburg"]; 
+
 
 for(const cur of badassWomen){
     var btn = $("<button>");
     btn.addClass("woman").attr("data-woman", cur);
     btn.text(cur);
     $("#buttons").append(btn);
-}
+};
 
 //Event listeners
+$("#submit-button").on("click", function(){
+    event.preventDefault();
+    var btn2 = $("<button>");
+    var inputTerm = $("#term").val();  
+    btn2.addClass("woman").attr("data-woman", inputTerm);
+    btn2.text(inputTerm);
+    $("#buttons").append(btn2);
+    badassWomen.push(inputTerm);
+    $("form").trigger("reset"); 
+});
 
-$("button").on("click", function(){
+$(document.body).on("click", ".woman", function(){
     $("#gifs-appear-here").empty();
     var woman = $(this).attr("data-woman");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -35,7 +41,7 @@ $("button").on("click", function(){
             var stillSource = i.images.fixed_height_still.url;
             var animatedSource = i.images.original.url;
             p.text("Rating: " + i.rating);        
-            womanImage.attr("src", stillSource).addClass("col-10 giphy").attr("data-state", "still").attr("data-URL", animatedSource);
+            womanImage.attr("src", stillSource).addClass("col-10 giphy btn-new").attr("data-state", "still").attr("data-URL", animatedSource);
             womanDiv.append(p);
             womanDiv.append(womanImage).addClass("giphyDiv");
             $("#gifs-appear-here").prepend(womanDiv);
@@ -49,10 +55,6 @@ $("button").on("click", function(){
         })
     })
 })
-
-
-
-
 
 
 });

@@ -11,7 +11,7 @@
 --------------------*/
 
 body{
-    background-image: url("../images/bright_squares.png");
+    background-image: url("../images/green_gobbler.png");
     color: #383838;        
     font-size: 1em; 
     font-family: Georgia, 'Times New Roman', Times, serif;    
@@ -30,12 +30,14 @@ h1 {
 main {
     flex: 1 0 auto;
 } 
-.giphy {
- /* width: 400px; */
+#search-form {
+ padding-top: 15px;
 }
+
 .giphyDiv {
     width: 200px;
 }
+
 
 /* Footer styles
 --------------------*/
