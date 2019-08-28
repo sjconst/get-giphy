@@ -16,6 +16,7 @@ body{
     font-size: 1em; 
     font-family: Georgia, 'Times New Roman', Times, serif;    
     height: 100%;
+    margin-left: 160px;
  }
 
 
@@ -24,12 +25,19 @@ h1 {
     font-size: 2rem;
 }
 
+h2 {
+    font-size: 1rem;   
+    font-family: 'Beth Ellen', cursive;
+}
+
 
 /* Main body styles
 --------------------*/
 main {
     flex: 1 0 auto;
+    
 } 
+
 #search-form {
  padding-top: 15px;
 }
@@ -38,6 +46,57 @@ main {
     width: 200px;
 }
 
+label {
+    color: #92623B;
+    font-weight: 400;
+}
+
+.addMore {
+    height: 50px;
+}
+
+.imageHeart {  
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: #92623B;
+}
+img {
+    width: 180px;
+}
+
+#sidebar {
+    display: block;
+    padding: 20px 10px;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 200px;
+    text-align: center;  
+    background-color: rgba(255, 255, 255, 0.25);
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    #sidebar {
+        font-size: 0.5rem;
+        padding-top: 15px;
+        height: 160px;
+        width: 100%;
+        top: 70%;
+        position: fixed;
+    } 
+    body {
+        margin-left: 0px;       
+    }
+    main {
+        margin-bottom: 220px;
+    }
+    img {
+        width: 80px;
+    }
+}
 
 /* Footer styles
 --------------------*/

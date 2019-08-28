@@ -7,6 +7,7 @@
     <title>Get Giphy</title>
      <!--// bootstrap stylesheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!--// google fonts and font awesome stylesheet-->
     <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Permanent+Marker|Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -21,23 +22,37 @@
         <h1 class="row justify-content-center">Get Giphy</h1>
     </header>
 
-<!-- // Main section -->
-<main role="main" class="container">    
-    <div class="row justify-content-center" id="buttons"> 
-        <!-- <button class="btn-new col-xs-6"><i class="ion-ios-plus-outline"></i></button>   -->
-    </div> 
-    <form id="search-form">
-        <div class="form-group">
-            <label for="term">Add a bad@ss woman</label>
-            <input type="text" id="term">   
-        </div> 
-        <button type="submit" class="btn btn btn-primary" id="submit-button">Submit</button>       
-    </form>
-    <div id="gifs-appear-here" class="row">        
-    </div>
-</main>
-<!-- // Footer -->
 
+<!-- // Favorites Sidebard -->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h2>My Favorites</h2>
+        <i class="fas fa-heart"></i>
+    </div>
+    <div class="favs-go-here">        
+    </div>
+</nav>
+
+<!-- // Main section -->
+    <main role="main" class="container">    
+        <div class="row justify-content-center" id="buttons"> 
+        </div> 
+        <form id="search-form">
+            <div class="form-group">
+                <label for="term">Add a bad@ss woman</label>
+                <input type="text" id="term">   
+                <button type="submit" class="btn-sm btn-primary" id="submit-button">Submit</button>    
+            </div>            
+        </form>
+        <div id="gifs-appear-here" class="row">        
+        </div>
+        <div id="add-ten" class="row">        
+        </div>
+    </main>
+
+
+
+<!-- // Footer -->
 <footer id="sticky-footer">
     <div class="container">
         <p>Copyright &copy</p>
