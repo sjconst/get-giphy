@@ -45,7 +45,6 @@ $("#submit-button").on("click", function(){
     badassWomen.push(inputTerm);
     $("form").trigger("reset"); 
 });
-
 $(document.body).on("click", ".woman", ".addMore", function(){
     var $gifsHere = $("#gifs-appear-here");
     $gifsHere.empty();
@@ -55,9 +54,7 @@ $(document.body).on("click", ".woman", ".addMore", function(){
     $("#add-ten").html(button);
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       woman + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
-
     $.get(queryURL).done(getImages.getResults)
-
     $(".addMore").on("click", function(){
         var tenMore = 10;
         var moreURL = queryURL + "&offset=" + tenMore;       
